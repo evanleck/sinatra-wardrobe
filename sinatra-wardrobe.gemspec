@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Evan Lecklider"]
   s.email       = ["evan.lecklider@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{A quick and dirty static file router.}
-  s.description = %q{A quick and dirty static file router.}
+  s.summary     = %q{A quick and dirty static file router for Sinatra.}
+  s.description = %q{A quick and dirty static file router for Sinatra.}
 
   s.rubyforge_project = "sinatra-wardrobe"
 
