@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Sinatra::Wardrobe::VERSION
   s.authors     = ["Evan Lecklider"]
   s.email       = ["evan.lecklider@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/l3ck/sinatra-wardrobe"
   s.summary     = %q{A quick and dirty static file router for Sinatra.}
   s.description = %q{A quick and dirty static file router for Sinatra.}
 
