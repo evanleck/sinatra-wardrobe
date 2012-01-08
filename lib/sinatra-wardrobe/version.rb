@@ -1,6 +1,6 @@
 module Sinatra
   module Wardrobe
-    VERSION = "0.0.2"
+    VERSION = "0.0.3"
     
     # http://www.joereiss.net/starwars/ascii/xwing.art
     #                                       .--.
