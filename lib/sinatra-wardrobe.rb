@@ -23,10 +23,10 @@ module Sinatra
     # because it's a declaration!
     def suit_up!(options = {})
       options = {
-        directories: ['./views'],
-        extensions: ['.md'],
-        excludes: ['layout.erb'],
-        layout_engine: :erb
+        :directories => ['./views'],
+        :extensions => ['.md'],
+        :excludes => ['layout.erb'],
+        :layout_engine => :erb
       }.merge(options)
       
       [:extensions, :excludes, :directories].each do |option|
@@ -35,14 +35,14 @@ module Sinatra
         end
       end
       
+      # a little Regexp to filter out exclusions
       directories_regexp = Regexp.new(options[:directories].join('|'))
       
+      # loop and then loop and then GLOB!!
       options[:directories].each do |dir|
         options[:extensions].each do |ext|
           Dir.glob("#{ dir }/**/*#{ ext }") do |file|
             file_name = file.gsub(directories_regexp, '')
-          
-            $stdout.puts "File found #{ file } and file_name is #{ file_name }"
           
             next if options[:excludes].include?(file_name.gsub(/\//, ''))
           
@@ -52,7 +52,7 @@ module Sinatra
               word.capitalize!
             end.join(' ')
           
-            @@hats << { path: file_route, title: file_title, extension: ext }
+            @@hats << { :path => file_route, :title => file_title, :extension => ext }
           end
         end
       end
